@@ -7,8 +7,7 @@ import org.junit.Test;
 import br.com.rmd.exception.ExceptionTypes;
 import br.com.rmd.messages.BudgetValidationMessages;
 import br.com.rmd.model.Budget;
-import br.com.rmd.rules.BudgetRules;
-import br.com.rmd.rules.invoker.RulesInvoker;
+import br.com.rmd.invoker.RulesInvoker;
 
 public class BudgetRulesTest extends RulesInvoker<BudgetRules, BudgetValidationMessages, Budget> {
 

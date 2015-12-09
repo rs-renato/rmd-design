@@ -4,8 +4,7 @@ import org.junit.Test;
 
 import br.com.rmd.messages.UserValidationMessages;
 import br.com.rmd.model.User;
-import br.com.rmd.rules.UserRules;
-import br.com.rmd.rules.invoker.RulesInvoker;
+import br.com.rmd.invoker.RulesInvoker;
 
 public class UserRulesTest extends RulesInvoker<UserRules, UserValidationMessages, User> {
 
