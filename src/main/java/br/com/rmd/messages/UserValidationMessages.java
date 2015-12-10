@@ -1,6 +1,9 @@
 package br.com.rmd.messages;
 
-
+/**
+ * User validation messages. This enum contais all messages wicth will
+ * be thrown on user validations.
+ */
 public enum UserValidationMessages implements ValidationMessages{
 
 	INVALID_LOGIN("The user login is invalid"),
@@ -9,10 +12,11 @@ public enum UserValidationMessages implements ValidationMessages{
 	
 	private String description;
 	
-	private UserValidationMessages(String description) {
+	UserValidationMessages(String description) {
 		this.description = description;
 	}
-	
+
+	@Override
 	public String getDescription() {
 		return description;
 	}

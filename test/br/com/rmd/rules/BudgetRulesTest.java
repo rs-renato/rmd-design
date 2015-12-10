@@ -1,14 +1,17 @@
 package br.com.rmd.rules;
 
-import java.util.Date;
-
-import org.junit.Test;
-
-import br.com.rmd.exception.ExceptionTypes;
+import br.com.rmd.invoker.RulesInvoker;
 import br.com.rmd.messages.BudgetValidationMessages;
 import br.com.rmd.model.Budget;
-import br.com.rmd.invoker.RulesInvoker;
+import org.junit.Test;
 
+import java.util.Date;
+
+/**
+ * Budget Rules Validation Test.
+ * All rules container under test, must inherit {@link RulesInvoker} class,
+ * informing {@link Rules}, {@link br.com.rmd.messages.ValidationMessages} and the Model under test.
+ */
 public class BudgetRulesTest extends RulesInvoker<BudgetRules, BudgetValidationMessages, Budget> {
 
 	@Test
@@ -18,14 +21,5 @@ public class BudgetRulesTest extends RulesInvoker<BudgetRules, BudgetValidationM
 		budget.setCreationDate(new Date());
 		
 		validate(BudgetRules.CREATION_DATE, budget);
-		
-		
-		try {
-			for (BudgetRules rules: BudgetRules.values()) {
-				rules.validate(budget);
-			}
-		} catch (ExceptionTypes e) {
-			System.out.println(e.getUserValidationMessages().getDescription());
-		}
 	}
 }

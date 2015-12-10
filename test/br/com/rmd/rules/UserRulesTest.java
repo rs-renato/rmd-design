@@ -1,29 +1,33 @@
 package br.com.rmd.rules;
 
-import org.junit.Test;
-
+import br.com.rmd.invoker.RulesInvoker;
 import br.com.rmd.messages.UserValidationMessages;
 import br.com.rmd.model.User;
-import br.com.rmd.invoker.RulesInvoker;
+import org.junit.Test;
 
+/**
+ * Budget Rules Validation Test.
+ * All rules container under test, must inherit {@link RulesInvoker} class,
+ * informing {@link Rules}, {@link br.com.rmd.messages.ValidationMessages} and the Model under test.
+ */
 public class UserRulesTest extends RulesInvoker<UserRules, UserValidationMessages, User> {
 
+    @Test
+    public void testUserValid(){
+
+        User user = new User();
+        user.setLogin("juvenal");
+
+        validate(UserRules.LOGIN, user);
+    }
+
 	@Test
-	public void testUserException(){
-		
+	public void testInvalidUserLogin(){
+
 		User user = new User();
-		user.setLogin("r");
-		
+		user.setLogin("ana");
+
 		validateAndExpect(UserRules.LOGIN, UserValidationMessages.INVALID_LOGIN, user);
 	}
-	
-	@Test
-	public void testUserValid(){
-		
-		User user = new User();
-		user.setLogin("renato");
-		
-		validate(UserRules.LOGIN, user);
-	}
-	
+
 }

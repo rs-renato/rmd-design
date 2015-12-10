@@ -2,6 +2,9 @@ package br.com.rmd.model;
 
 import java.util.Date;
 
+/**
+ * User model class
+ */
 public class User {
 
 	private String login;

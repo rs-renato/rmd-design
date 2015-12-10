@@ -2,6 +2,9 @@ package br.com.rmd.model;
 
 import java.util.Date;
 
+/**
+ * Budget model class
+ */
 public class Budget {
 	
 	private Date creationDate;

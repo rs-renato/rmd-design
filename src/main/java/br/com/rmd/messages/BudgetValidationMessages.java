@@ -1,5 +1,9 @@
 package br.com.rmd.messages;
 
+/**
+ * Budget validation messages. This enum contais all messages wicth will
+ * be thrown on budget validations.
+ */
 public enum BudgetValidationMessages implements ValidationMessages {
 	
 	INVALID_CREATION_DATE("The creation date is invalid"),
@@ -8,7 +12,7 @@ public enum BudgetValidationMessages implements ValidationMessages {
 
 	private String description;
 
-	private BudgetValidationMessages(String description) {
+	BudgetValidationMessages(String description) {
 		this.description = description;
 	}
 	
