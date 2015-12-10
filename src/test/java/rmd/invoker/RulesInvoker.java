@@ -1,11 +1,12 @@
-package br.com.rmd.invoker;
+package rmd.invoker;
+
+import br.com.rmd.exception.ExceptionTypes;
+import br.com.rmd.messages.ValidationMessages;
+import br.com.rmd.rules.Rules;
+import org.apache.log4j.Logger;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import br.com.rmd.exception.ExceptionTypes;
-import br.com.rmd.rules.Rules;
-import br.com.rmd.messages.ValidationMessages;
-import org.apache.log4j.Logger;
 
 /**
  * Abstract class for rules validations

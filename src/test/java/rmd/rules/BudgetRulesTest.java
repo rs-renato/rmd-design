@@ -1,9 +1,11 @@
-package br.com.rmd.rules;
+package rmd.rules;
 
-import br.com.rmd.invoker.RulesInvoker;
 import br.com.rmd.messages.BudgetValidationMessages;
 import br.com.rmd.model.Budget;
+import br.com.rmd.rules.BudgetRules;
+import br.com.rmd.rules.Rules;
 import org.junit.Test;
+import rmd.invoker.RulesInvoker;
 
 import java.util.Date;
 

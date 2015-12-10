@@ -1,9 +1,11 @@
-package br.com.rmd.rules;
+package rmd.rules;
 
-import br.com.rmd.invoker.RulesInvoker;
 import br.com.rmd.messages.UserValidationMessages;
 import br.com.rmd.model.User;
+import br.com.rmd.rules.Rules;
+import br.com.rmd.rules.UserRules;
 import org.junit.Test;
+import rmd.invoker.RulesInvoker;
 
 /**
  * Budget Rules Validation Test.
