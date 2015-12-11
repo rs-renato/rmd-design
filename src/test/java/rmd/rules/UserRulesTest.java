@@ -29,6 +29,7 @@ public class UserRulesTest extends RulesInvoker<UserRules, UserValidationMessage
 		User user = new User();
 		user.setLogin("ana");
 
+        //Validates the rules for login and expects an 'invalid login message' from validator
 		validateAndExpect(UserRules.LOGIN, UserValidationMessages.INVALID_LOGIN, user);
 	}
 
