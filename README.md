@@ -1,4 +1,4 @@
-# rmd-design
+# rmd-design for unit testing
 
 Rule-Messages-Domain Design. This simple project has laboratory proposal to shows one way to development 
  focused at unit test cases, based on rules, validation messages and domain model.
